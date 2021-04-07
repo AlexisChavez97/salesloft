@@ -3,7 +3,7 @@
 class People
   HOST = "https://api.salesloft.com"
   TOKEN = "Bearer #{ENV["API_KEY"]}"
-  
+
   def self.all
     path = "v2/people.json"
     uri = URI("#{HOST}/#{path}")
