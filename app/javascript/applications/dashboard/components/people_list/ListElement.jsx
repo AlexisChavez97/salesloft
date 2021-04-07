@@ -1,5 +1,4 @@
 import React from 'react'
-import 'bulma/css/bulma.min.css';
 
 const ListElement = ({person}) => {
   const {email_address: emailAddress, display_name: fullName, title} = {...person}
