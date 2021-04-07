@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import List from './components/people_list/index'
+import PeopleList from './components/people_list/index'
+import CharacterFrequency from './components/CharacterFrequency'
 
 const Dashboard = () => {
   const [people, setPeople] = useState([]);
   const [activeTab, setActiveTab] = useState('peopleList');
 
   useEffect(() => {
-    async function peopleList() {
+    async function peopleData() {
       const response = await axios.get('/api/v1/people');
       setPeople(response.data.data);
     }
-    peopleList();
+    peopleData();
   }, [] );
 
   const content = {
-    peopleList: <List people={people}/>,
-    counter: <p>Counter Tab</p>,
+    peopleList: <PeopleList people={people}/>,
+    counter: <CharacterFrequency people={people}/>,
     duplicates: <p>Duplicates Tab</p>
   }
 
@@ -35,9 +36,9 @@ const Dashboard = () => {
         <nav className='tabs is-boxed is-fullwidth'>
           <div className='container'>
             <ul>
-              <li onClick={() => setActiveTab('peopleList')} className={shouldShow('peopleList')}><a>List</a></li>
-              <li onClick={() => setActiveTab('counter')} className={shouldShow('counter')}><a>Possible email duplicates</a></li>
-              <li onClick={() => setActiveTab('duplicates')} className={shouldShow('duplicates')}><a>Letters counter</a></li>
+              <li onClick={() => setActiveTab('peopleList')} className={shouldShow('peopleList')}><a>People List</a></li>
+              <li onClick={() => setActiveTab('counter')} className={shouldShow('counter')}><a>Characters Frequency</a></li>
+              <li onClick={() => setActiveTab('duplicates')} className={shouldShow('duplicates')}><a>Possible email duplicates</a></li>
             </ul>
           </div>
         </nav>

@@ -1,9 +1,8 @@
 import React from 'react'
-import 'bulma/css/bulma.min.css';
 import ListElement from './ListElement';
 
-const List = ({people}) => {
-  return  <table className="table is-bordered is-striped is-hoverable" style={{margin: '75px auto'}}>
+const PeopleList = ({people}) => {
+  return  <table className="table people-list is-bordered is-striped is-hoverable" style={{margin: '75px auto'}}>
     <thead>
       <tr>
         <th>Name</th>
@@ -19,4 +18,4 @@ const List = ({people}) => {
   </table>
 }
 
-export default List;
+export default PeopleList;
