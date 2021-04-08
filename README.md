@@ -44,4 +44,5 @@ You can lint the code running Rubocop for ruby and Eslint for JS:
 ## Running the application
 
 You'll need to start the rails server `bin/rails s` and the webpack server `bin/webpack-dev-server`
+
 To consume the Salesloft API you'll need to add a `.env` file with your API key
