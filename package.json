@@ -23,6 +23,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint app/javascript/**",
+    "lint:fix": "eslint app/javascript/** --fix"
   }
 }

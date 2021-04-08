@@ -1,0 +1,11 @@
+.table {
+  margin: 75px auto;
+}
+
+.hero-title {
+  text-align: center;
+}
+
+li.is-active {
+  color: #3e8ed0;
+}

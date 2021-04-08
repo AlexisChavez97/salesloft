@@ -2,7 +2,7 @@ import React from 'react'
 import ListElement from './ListElement';
 
 const PeopleList = ({people}) => {
-  return  <table className="table people-list is-bordered is-striped is-hoverable" style={{margin: '75px auto'}}>
+  return  <table className="table people-list is-bordered is-striped is-hoverable">
     <thead>
       <tr>
         <th>Name</th>
