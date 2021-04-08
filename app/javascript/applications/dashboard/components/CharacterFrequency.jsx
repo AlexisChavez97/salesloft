@@ -5,7 +5,7 @@ const CharacterFrequency = ({people}) => {
   const characters = countCharacters(people)
 
   return <>
-    <table className="table frequency is-bordered is-striped is-hoverable" style={{margin: '75px auto'}}>
+    <table className="table frequency is-bordered is-striped is-hoverable">
       <thead>
         <tr>
           <th>Character</th>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import PeopleList from './components/people_list/index'
 import CharacterFrequency from './components/CharacterFrequency'
+import PossibleDuplicates from './components/PossibleDuplicates';
 
 const Dashboard = () => {
   const [people, setPeople] = useState([]);
@@ -18,7 +19,7 @@ const Dashboard = () => {
   const content = {
     peopleList: <PeopleList people={people}/>,
     counter: <CharacterFrequency people={people}/>,
-    duplicates: <p>Duplicates Tab</p>
+    duplicates: <PossibleDuplicates people={people}/>
   }
 
   const shouldShow = tab => {
@@ -29,7 +30,7 @@ const Dashboard = () => {
   return <>
     <section className='hero is-medium is-info'>
       <div className='hero-body'>
-        <p className='title' style={{textAlign: 'center'}}>Salesloft people dashboard</p>
+        <p className='title hero-title'>Salesloft people dashboard</p>
       </div>
 
       <div className='hero-foot'>
